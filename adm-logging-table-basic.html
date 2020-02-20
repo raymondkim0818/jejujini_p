@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META SECTION -->
+        <title>Atlant - Responsive Bootstrap Admin Template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <!-- EOF CSS INCLUDE -->
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="index.html"></a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li class="xn-profile">
+                        <a href="#" class="profile-mini">
+                            <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
+                        </a>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
+                            </div>
+                            <div class="profile-data">
+                                <div class="profile-data-name">John Doe</div>
+                                <div class="profile-data-title">Web Developer/Designer</div>
+                            </div>
+                            <div class="profile-controls">
+                                <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span></a>
+                                <a href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="xn-title">네비게이션</li>
+                    <li>
+                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">대시보드</span></a>
+                    </li>
+                    <li>
+                        <a href="adm-form-publish-tabs.html"><span class="fa fa-flash"></span> <span class="xn-text">메세지 발송</span></a>
+                    </li>
+                    <li>
+                        <a href="adm-publish-table-basic.html"><span class="fa fa-check"></span> <span class="xn-text">메세지 발송 집계</span></a>
+                    </li>
+                    <li>
+                        <a href="adm-connection-table-basic.html"><span class="fa fa-random"></span> <span class="xn-text">연결 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="adm-queue-table-basic.html"><span class="fa fa-inbox"></span> <span class="xn-text">메세지 큐 (Queue)</span></a>
+                    </li>
+                    <li><a href="adm-statistics-table-basic.html"><span class="fa fa-bar-chart-o"></span>통계</a></li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">설정</span></a>
+                        <ul>
+                            <li><a href="adm-setting-table-basic.html"><span class="fa fa-wrench"></span>환경설정</a></li>
+                            <li><a href="adm-vhost-table-basic.html"><span class="fa fa-sitemap"></span>가상 호스트</a></li>
+                            <li><a href="adm-task-table-basic.html"><span class="fa fa-tasks"></span>작업 (Task)</a></li>
+                            <li><a href="adm-sys-table-basic.html"><span class="fa fa-anchor"></span> $SYS 설정</a></li>
+                        </ul>
+                    </li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-wrench"></span> <span class="xn-text">시스템</span></a>
+                        <ul>
+                            <li><a href="adm-monitoring-table-basic.html"><span class="fa fa-dashboard"></span> 시스템 모니터링</a></li>
+                            <li><a href="adm-backup-table-basic.html"><span class="fa fa-download"></span> 백업/복구</a></li>
+                            <li><a href="adm-account-table-basic.html"><span class="fa fa-shield"></span> 계정</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="xn-title">System</li>
+                    <li class="active">
+                        <a href="adm-logging-table-basic.html"><span class="fa fa-book"></span> <span class="xn-text">로그 (Logging)</span></a>
+                    </li>
+                    <li>
+                        <!-- VHost별 라이센스 구성 목록 -->
+                        <a href="adm-license-table-basic.html"><span class="fa fa-lock"></span>라이센스</a>
+                    </li>
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Search..."/>
+                        </form>
+                    </li>
+                    <!-- END SEARCH -->
+                    <!-- SIGN OUT -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
+                    </li>
+                    <!-- END SIGN OUT -->
+                    <!-- MESSAGES -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-comments"></span></a>
+                        <div class="informer informer-danger">4</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-comments"></span> Messages</h3>
+                                <div class="pull-right">
+                                    <span class="label label-danger">4 new</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-online"></div>
+                                    <img src="assets/images/users/user2.jpg" class="pull-left" alt="John Doe"/>
+                                    <span class="contacts-title">John Doe</span>
+                                    <p>Praesent placerat tellus id augue condimentum</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-away"></div>
+                                    <img src="assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk"/>
+                                    <span class="contacts-title">Dmitry Ivaniuk</span>
+                                    <p>Donec risus sapien, sagittis et magna quis</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-away"></div>
+                                    <img src="assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali"/>
+                                    <span class="contacts-title">Nadia Ali</span>
+                                    <p>Mauris vel eros ut nunc rhoncus cursus sed</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="list-group-status status-offline"></div>
+                                    <img src="assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader"/>
+                                    <span class="contacts-title">Darth Vader</span>
+                                    <p>I want my money back!</p>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-center">
+                                <a href="pages-messages.html">Show all messages</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- END MESSAGES -->
+                    <!-- TASKS -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#"><span class="fa fa-tasks"></span></a>
+                        <div class="informer informer-warning">3</div>
+                        <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="fa fa-tasks"></span> Tasks</h3>
+                                <div class="pull-right">
+                                    <span class="label label-warning">3 active</span>
+                                </div>
+                            </div>
+                            <div class="panel-body list-group scroll" style="height: 200px;">
+                                <a class="list-group-item" href="#">
+                                    <strong>Phasellus augue arcu, elementum</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 25 Sep 2014 / 50%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Aenean ac cursus</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
+                                    </div>
+                                    <small class="text-muted">Dmitry Ivaniuk, 24 Sep 2014 / 80%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Lorem ipsum dolor</strong>
+                                    <div class="progress progress-small progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">95%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 23 Sep 2014 / 95%</small>
+                                </a>
+                                <a class="list-group-item" href="#">
+                                    <strong>Cras suscipit ac quam at tincidunt.</strong>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                    </div>
+                                    <small class="text-muted">John Doe, 21 Sep 2014 /</small><small class="text-success"> Done</small>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-center">
+                                <a href="pages-tasks.html">Show all tasks</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- END TASKS -->
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->
+                
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tables</a></li>
+                    <li class="active">Basic</li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                
+                <!-- PAGE TITLE -->
+                <div class="page-title">
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Virtual host management</h2>
+                </div>
+                <!-- END PAGE TITLE -->
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                    <div class="col-md-12">
+                        <!-- START BASIC TABLE SAMPLE -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">가상 호스트 (Virtual Host)기능을 통해 동시에 독립된 여러 서비스를 운용할 수 있습니다.</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <code>host</code>을 클릭하면 상세 정보를 확인 할 수 있습니다. (todo 전체 재접속 or unack 목록 재접속)
+                                    <button id="gen_vhost" type="button" class="btn btn-primary pull-right">가상 호스트 생성하기</button>
+                                    <p><br></p>
+                                </div>
+                                
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>host (alias)</th>
+                                            <th>created</th>
+                                            <th>conn/limit</th>
+                                            <th>queues</th>
+                                            <th>ready</th>
+                                            <th>unacknowledge</th>
+                                            <th>total</th>
+                                            <th>rats</th>
+                                            <th>status</th>
+                                            <th>#</th>
+                                            <th>account</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#modal_basic">테스트 가상 호스트 1</a></td>
+                                            <td>2015/01/22</td>
+                                            <td>100K / unlimit</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>2K/s</td>
+                                            <td><span class="label label-success">active</span></td>
+                                            <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-bar-chart-o"></i></a></td>
+                                            <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-cog"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#modal_basic">테스트 가상 호스트 2</a></td>
+                                            <td>2015/01/22</td>
+                                            <td>100K / unlimit</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>200K</td>
+                                            <td>2K/s</td>
+                                            <td><span class="label label-success">active</span></td>
+                                            <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-bar-chart-o"></i></a></td>
+                                            <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-cog"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END BASIC TABLE SAMPLE -->
+                    </div>
+                    <!-- END PAGE CONTENT WRAPPER -->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+        <!-- success -->
+        <div class="message-box message-box-success animated fadeIn" id="message-box-success">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-check"></span> Success</div>
+                    <div class="mb-content">
+                        <br>
+                        <p><b>가상 호스트(Virtual host)와 관리자 계정이 정상적으로 생성 되었습니다.</b></p>
+                        <br>
+                        <p>* Host 이름을 클릭하여 설정을 변경 할 수 있습니다.</p>
+                        <p>* account 컬럼 항목을 클릭하여 사용자를 등록하세요.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- danger -->
+        <div class="message-box message-box-danger animated fadeIn" id="message-box-danger">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-times"></span> Danger</div>
+                    <div class="mb-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tellus sed mauris mollis pellentesque nec a ligula. Quisque ultricies eleifend lacinia. Nunc luctus quam pretium massa semper tincidunt. Praesent vel mollis eros. Fusce erat arcu, feugiat ac dignissim ac, aliquam sed urna. Maecenas scelerisque molestie justo, ut tempor nunc.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODALS -->
+        <!-- Start VHost Modal -->
+        <div class="modal" id="modal_basic" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="defModalHead">Virtual host 정보</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>웹 관리자 콘솔 로그인을 위한 계정을 포함합니다. (ID:Virtual host 값)</p>
+                        <div class="page-content-wrap">
+                            
+                            <div class="row">
+                                <form class="form-horizontal">
+                                    <div class="col-md-12">
+                                        <!-- <div class="form-group">
+                                            <label class="col-md-2">URL</label>
+                                            <div class="col-md-8">
+                                                <code>mqtt://e8a88bb6f4d4asdfasfas25cd54a14:1234@dev.xpn.com:1883</code>
+                                            </div>
+                                        </div> -->
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12">Server</label>
+                                            <div class="col-md-10 col-md-12">
+                                                <code>sub.domain.com</code>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2">Virtual host</label>
+                                            <div class="col-md-10 col-xs-12">
+                                                <code>e8a88bb6f4d420a8517965d25cd54a14</code>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="col-md-2">Password</label>
+                                            <div class="col-md-10 col-xs-12">
+                                                <code>hb2ta5kER55Z</code>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12">Port</label>
+                                            <div class="col-md-6 col-xs-12">
+                                                <code>1883</code>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label left">별칭(aliase)</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <input type="text" class="form-control" value=""/>
+                                                <span class="help-block">관리자에서 Host이름을 쉽게 구분을 위한 별칭 지정</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label left">연결 제한</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <input type="text" class="form-control" value=""/>
+                                                <span class="help-block">최대 동접 갯수로, 0 또는 입력하지 않을경우 연결 제한 없음</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label left">KeepAlive</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <input type="text" class="form-control" value="300"/>
+                                                <span class="help-block">초단위 설정, 0또는 입력하지 않을경우 Keepalive기능을 사용하지 않음</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label">설명</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <textarea class="form-control" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label">사용</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Virtual host 기능을 활성화 한다.</label>
+                                                <span class="help-block text-danger">* 사용 체크가 해지될경우 모든 연결이 강제 종료되며 클라이언트에서 활성화 될때까지 계속 재접속을 시도하게 됩니다.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End VHost modal -->
+        <!-- Start ACL Modal -->
+        <div class="modal" id="modal_basic_acl" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="defModalHead">Virtual host 정보</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p align="center"><span id="mqtt_uri"><code>user</code> 항목을 클릭하면 여기에 URL정보가 표시됩니다.</span></p>
+                        
+                        <div class="page-content-wrap">
+                            
+                            <div class="row">
+                                <form class="form-horizontal">
+                                    <div class="col-md-12">
+                                        <table id="user_table" class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>user</th>
+                                                    <th>read</th>
+                                                    <th>write</th>
+                                                    <th>delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><a href="#" data-uri="mqtt://e8a88bb6f4d420a8517965d25cd54a14:test_user1@dev.domain.com:10044">test_user1</a></td>
+                                                    <td>true</td>
+                                                    <td>true</td>
+                                                    <td>true</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><a href="#">test_user2</a></td>
+                                                    <td>true</td>
+                                                    <td>true</td>
+                                                    <td>true</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label left">User</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <input type="text" class="form-control" placeholder="사용자 ID, 공백및 특수문자 제외 최소 4자 이상" value=""/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="col-md-2 col-xs-12 control-label">Access</label>
+                                            <div class="col-md-9 col-xs-12">
+                                                <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Subscribe</label>
+                                                &nbsp;
+                                                <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Publish</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Add user</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End ACL Modal -->
+        <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <!-- END PLUGINS -->
+        
+        <!-- START THIS PAGE PLUGINS-->
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/demo_tables.js"></script>
+        <!-- END THIS PAGE PLUGINS-->
+        
+        <!-- START TEMPLATE -->
+        <!-- <script type="text/javascript" src="js/settings.js"></script> -->
+        
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>
+        <!-- END TEMPLATE -->
+        <!-- END SCRIPTS -->
+        <script type="text/javascript">
+        $('#gen_vhost').click(function(){
+        if (confirm('가상 호스트를 생성하시겠습니까?\n관리 계정및 URL 정보가 같이 생성됩니다.')) {
+        $('#box1').trigger("click");
+        }
+        });
+        $('#user_table a').click(function(){
+        //console.log($(this).data('uri'));
+        $('#mqtt_uri').html("<code>" + $(this).data('uri') + "</code>");
+        });
+        //var dt = $('.date input:radio:checked').val();
+        
+        </script>
+        <button id="box1" type="button" class="btn btn-success mb-control" data-box="#message-box-success">Success</button>
+    </body>
+</html>

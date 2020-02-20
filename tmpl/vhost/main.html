@@ -1,0 +1,275 @@
+<div class="col-md-12">
+    <!-- START BASIC TABLE SAMPLE -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">가상 호스트 (Virtual Host)기능을 통해 동시에 독립된 여러 서비스를 운용할 수 있습니다.</h3>
+        </div>
+        <div class="panel-body">
+            <div>
+                <code>host</code>을 클릭하면 상세 정보를 확인 할 수 있습니다. (todo 전체 재접속 or unack 목록 재접속)
+                <button id="gen_vhost" type="button" class="btn btn-primary pull-right">가상 호스트 생성하기</button>
+                <p><br></p>
+            </div>
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>host (alias)</th>
+                        <th>created</th>
+                        <th>conn/limit</th>
+                        <th>queues</th>
+                        <th>ready</th>
+                        <th>unacknowledge</th>
+                        <th>total</th>
+                        <th>rats</th>
+                        <th>status</th>
+                        <th>#</th>
+                        <th>account</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#" data-toggle="modal" data-target="#modal_basic">테스트 가상 호스트 1</a></td>
+                        <td>2015/01/22</td>
+                        <td>100K / unlimit</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>2K/s</td>
+                        <td><span class="label label-success">active</span></td>
+                        <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-bar-chart-o"></i></a></td>
+                        <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-cog"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#" data-toggle="modal" data-target="#modal_basic">테스트 가상 호스트 2</a></td>
+                        <td>2015/01/22</td>
+                        <td>100K / unlimit</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>200K</td>
+                        <td>2K/s</td>
+                        <td><span class="label label-success">active</span></td>
+                        <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-bar-chart-o"></i></a></td>
+                        <td><a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal_basic_acl"><i class="fa fa-cog"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END BASIC TABLE SAMPLE -->
+</div>
+<div class="message-box message-box-success animated fadeIn" id="message-box-success">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-check"></span> Success</div>
+            <div class="mb-content">
+                <br>
+                <p><b>가상 호스트(Virtual host)와 관리자 계정이 정상적으로 생성 되었습니다.</b></p>
+                <br>
+                <p>* Host 이름을 클릭하여 설정을 변경 할 수 있습니다.</p>
+                <p>* account 컬럼 항목을 클릭하여 사용자를 등록하세요.</p>
+            </div>
+            <div class="mb-footer">
+                <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- danger -->
+<div class="message-box message-box-danger animated fadeIn" id="message-box-danger">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-times"></span> Danger</div>
+            <div class="mb-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tellus sed mauris mollis pellentesque nec a ligula. Quisque ultricies eleifend lacinia. Nunc luctus quam pretium massa semper tincidunt. Praesent vel mollis eros. Fusce erat arcu, feugiat ac dignissim ac, aliquam sed urna. Maecenas scelerisque molestie justo, ut tempor nunc.</p>
+            </div>
+            <div class="mb-footer">
+                <button class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODALS -->
+<!-- Start VHost Modal -->
+<div class="modal" id="modal_basic" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="defModalHead">Virtual host 정보</h4>
+            </div>
+            <div class="modal-body">
+                <p>웹 관리자 콘솔 로그인을 위한 계정을 포함합니다. (ID:Virtual host 값)</p>
+                <div class="page-content-wrap">
+                    
+                    <div class="row">
+                        <form class="form-horizontal">
+                            <div class="col-md-12">
+                                <!-- <div class="form-group">
+                                    <label class="col-md-2">URL</label>
+                                    <div class="col-md-8">
+                                        <code>mqtt://e8a88bb6f4d4asdfasfas25cd54a14:1234@dev.xpn.com:1883</code>
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12">Server</label>
+                                    <div class="col-md-10 col-md-12">
+                                        <code>sub.domain.com</code>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2">Virtual host</label>
+                                    <div class="col-md-10 col-xs-12">
+                                        <code>e8a88bb6f4d420a8517965d25cd54a14</code>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-md-2">Password</label>
+                                    <div class="col-md-10 col-xs-12">
+                                        <code>hb2ta5kER55Z</code>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12">Port</label>
+                                    <div class="col-md-6 col-xs-12">
+                                        <code>1883</code>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label left">별칭(aliase)</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input type="text" class="form-control" value=""/>
+                                        <span class="help-block">관리자에서 Host이름을 쉽게 구분을 위한 별칭 지정</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label left">연결 제한</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input type="text" class="form-control" value=""/>
+                                        <span class="help-block">최대 동접 갯수로, 0 또는 입력하지 않을경우 연결 제한 없음</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label left">KeepAlive</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input type="text" class="form-control" value="300"/>
+                                        <span class="help-block">초단위 설정, 0또는 입력하지 않을경우 Keepalive기능을 사용하지 않음</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label">설명</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <textarea class="form-control" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label">사용</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Virtual host 기능을 활성화 한다.</label>
+                                        <span class="help-block text-danger">* 사용 체크가 해지될경우 모든 연결이 강제 종료되며 클라이언트에서 활성화 될때까지 계속 재접속을 시도하게 됩니다.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End VHost modal -->
+<!-- Start ACL Modal -->
+<div class="modal" id="modal_basic_acl" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="defModalHead">Virtual host 정보</h4>
+            </div>
+            <div class="modal-body">
+                <p align="center"><span id="mqtt_uri"><code>user</code> 항목을 클릭하면 여기에 URL정보가 표시됩니다.</span></p>
+                
+                <div class="page-content-wrap">
+                    
+                    <div class="row">
+                        <form class="form-horizontal">
+                            <div class="col-md-12">
+                                <table id="user_table" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>user</th>
+                                            <th>read</th>
+                                            <th>write</th>
+                                            <th>delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="#" data-uri="mqtt://e8a88bb6f4d420a8517965d25cd54a14:test_user1@dev.domain.com:10044">test_user1</a></td>
+                                            <td>true</td>
+                                            <td>true</td>
+                                            <td>true</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><a href="#">test_user2</a></td>
+                                            <td>true</td>
+                                            <td>true</td>
+                                            <td>true</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label left">User</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <input type="text" class="form-control" placeholder="사용자 ID, 공백및 특수문자 제외 최소 4자 이상" value=""/>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-md-2 col-xs-12 control-label">Access</label>
+                                    <div class="col-md-9 col-xs-12">
+                                        <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Subscribe</label>
+                                        &nbsp;
+                                        <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/>Publish</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Add user</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#gen_vhost').click(function(){
+        if (confirm('가상 호스트를 생성하시겠습니까?\n관리 계정및 URL 정보가 같이 생성됩니다.')) {
+            $('#box1').trigger("click");
+        }
+    });
+    $('#user_table a').click(function(){
+        //console.log($(this).data('uri'));
+        $('#mqtt_uri').html("<code>" + $(this).data('uri') + "</code>");
+    });
+</script>
+<button id="box1" type="button" class="btn btn-success mb-control" data-box="#message-box-success">Success</button>

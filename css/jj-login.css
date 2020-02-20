@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* LOGIN */
+#jj_login.login-container {float: left;width: 100%;min-height: 100%;background: #4382e9;}
+#jj_login.login-container .login-box .login-logo {background: url("../img/jj_logo@2x.png") top center no-repeat;width: 100%;height: 50px;float: left;margin-bottom: 20px;background-size: auto 100%;}
+#jj_login.login-container .login-box .login-body .login-subtitle {overflow:hidden;line-height: 20px;padding: 0px;margin-bottom:15px;font-size: 12px;color: #FFF;}
+#jj_login.login-container .login-box .login-body .login-subtitle a {color: #fff;padding:4px 0;width:auto;text-align: left;}
+#jj_login.login-container .login-box .login-body .login-subtitle label {color: #fff;padding:4px 0 5px 10px;margin: 0 -15px;font-size:15px;}
+#jj_login.login-container .login-footer {text-align: center;}
+#jj_login.login-container .login-footer > div {margin-bottom:5px;}
+#jj_login.login-container .login-box .login-body .login-subtitle label .icheckbox {margin-right:5px;width:15px;height:15px;}
+#jj_login.login-container .login-box .login-body .btn-info {height:40px; font-size:15px;}
+#jj_login.login-container .login-box .login-body .login-guide {overflow: hidden; background:rgba(0, 0, 0, 0.2); border-radius: 5px; color:#fff; padding:15px 0;}
+#jj_login.login-container .login-box .login-body .login-guide .login-guide-text {padding-bottom:10px;}
+#jj_login.login-container .login-box .login-body .login-guide h3 {color:#fff;}
+#jj_login.login-container .login-box .login-body .login-guide .btn-link-area {padding:0;}
+#jj_login.login-container .login-box .login-body .login-guide .btn-link {text-align:left; padding: 4px 0;}
+
+
+
+@media only screen and (max-width: 768px) {
+  #jj_login.login-container .login-box .login-body .login-guide [class^='col-md-'] {margin-bottom:0px;}
+  #jj_login.login-container .login-box .login-logo {margin-bottom:5px;}
+  #jj_login.login-container .login-box .login-body .login-subtitle label .icheckbox {vertical-align: -2px;}
+}
+
+
+#popup {display: none;}
+#popup.login-id-search {position: fixed;width: 320px;height: 200px;z-index: 1001;top: 50%;left: 50%;border-radius: 10px;overflow: hidden;margin-left: -160px;margin-top: -100px; background:#fff;}
+#popup .pop_content {position: relative; width:100%; padding:20px;}
+
+.mask{display:block;position:fixed;width:100%;height:100%;left:0;top:0;right:0;bottom:0;z-index:1000;background:#000;opacity:0.8;overflow:hidden;-webkit-overflow-scrolling: touch;}
+#popup .close_btn a.close {position: absolute; top:10px; right:10px; background-color: transparent;z-index: 10;}
+#popup .close_btn a.close img {width:20px; height:20px;}
+
