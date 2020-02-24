@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h3>Sass 와 SCSS 의 차이점</h3>
+    <div>
+        <p>Sass(Syntactically Awesome Style  Sheets)의 3버전에서 새롭게 등장한 SCSS는 CSS구문과 완전히 호환되도록 새로운 구문을 도입해만든 Sass의 모든 기능을 지원하는 CSS의 상위집합(Superset) 입니다.</p>
+        <p>더 쉽고 간단한 차이는 { } (중괄호)와 ; (세미콜론)의 유무입니다.</p>
+        <p>Sass:</p>
+        <pre>
+.list
+    width: 100px
+    float: left
+    li
+        color: red
+        background : url("./image.jpg")
+        &:last-child
+            margin-right: -10px;
+        </pre>
+
+        <p>SCSS:</p>
+        <pre>
+.list {
+    width: 100px;
+    float: left;
+    li {
+        color: red
+        background : url("./image.jpg")
+        &:last-child {
+            margin-right: -10px;
+        }
+    }
+}
+        </pre>
+        <p>Sass는 선택자의 유효범위를 '들여쓰기'로 구분하고, SCSS는 {} 로 범위를 구분합니다.<br/>Sass 방식과 SCSS 방식 중 어떤 방식이 마음에 드세요?</p>
+        <p>거의 유일합니다만, 다른 차이도 있습니다.<br/>아래는 Mixins( '믹스인'은 재사용 가능한 기능을 만드는 방식을 의미합니다 예제입니다.<br/>Sass는 단문 구문으로 사용합니다.</p>
+        <p>Sass:</p>
+        <pre>
+=border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius:    $radius
+    -ms-border-radius:     $radius
+    border-radius:         $radius
+.box
+    +border-radius(10px)
+        </pre>
+        <p>SCSS:</p>
+        <pre>
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+.box { @include border-radius(10px);}
+        </pre>
+        <p>Sass는 = 와 + 기호로 Mixins 기능을 사용했고,<br/>SCSS는 @mixin 과 @include 로 기능을 사용했습니다.</p>
+        <p>단순한 몇 가지를 제외하면 거의 차이가 없지만 복잡한 문장이 될 경우 여러 환경에 따른 장단점이 있을 수 있습니다.<br/>Sass는 좀 더 간결하고 작성하기 편리하며, {} 나 ; 를 사용하지 않아도 되니 코그사 훨씬 깔끔해집니다.<br/>SCSS는 인라인 코드(한 줄 작성)를 작설할 수 있고, CSS와 유사한 문법을 가지기 때문에 코드 통합이 훨씬 쉽습니다.</p>
+        <p>이렇게 몇몇 장단점이 있기 때무에 회사나 팀에서 원하는 방식을 사용해야 하거나, 개인 취향에 따라서 선책할 수 있습니다.<br/>단지 상황에 맞는, 원하는 방식으로 골라서 사용하면 됩니다.</p>
+        <p>보통의 경우 SCSS를 추천합니다.</p>
+        
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>
